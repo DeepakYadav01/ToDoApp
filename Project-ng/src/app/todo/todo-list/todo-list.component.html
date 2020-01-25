@@ -1,0 +1,22 @@
+<div class="style2">
+<p *ngIf="values.length > 0" >
+    <mat-card *ngFor="let value of values, let i=index">
+        <div align="center">
+            <div class="style3">
+            {{value.input}}
+        </div>
+            <br>
+        <button 
+         mat-button
+          mat-raised-button
+          color="warn"
+          (click)="values.splice(i,1)">Delete
+        </button >
+    </div>
+    </mat-card>
+</p>
+</div>
+<p class="p" *ngIf="values.length<=0" align="center"> Nothing is Added Yet! </p> 
+
+
+
